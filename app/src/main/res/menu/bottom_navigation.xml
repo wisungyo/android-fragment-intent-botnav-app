@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/bundle"
+        android:icon="@drawable/ic_email"
+        android:title="Bundle"
+        app:cnb_iconColor="#1F94ED" />
+    <item
+        android:id="@+id/serializable"
+        android:icon="@drawable/ic_message"
+        android:title="Serializable"
+        app:cnb_iconColor="#6637B4" />
+    <item
+        android:id="@+id/parcelable"
+        android:icon="@drawable/ic_add"
+        android:title="Parcelable"
+        app:cnb_iconColor="#E51E66" />
+    <item
+        android:id="@+id/implicit"
+        android:icon="@drawable/ic_videocam"
+        android:title="Implicit"
+        app:cnb_iconColor="#4BAF51" />
+    <item
+        android:id="@+id/explicit"
+        android:icon="@drawable/ic_call"
+        android:title="Explicit"
+        app:cnb_iconColor="#FF5722" />
+</menu>

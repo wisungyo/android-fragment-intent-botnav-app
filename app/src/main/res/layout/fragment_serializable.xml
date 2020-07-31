@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#6637B4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:id="@+id/v_middle_serializable"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/bg_view_bundle"
+        android:elevation="2dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_serializable_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:text="Serializable Login"
+        android:textColor="#fff"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@id/v_middle_serializable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/et_serializable_username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_edit_text_serializable"
+        android:fontFamily="@font/roboto_light"
+        android:gravity="center"
+        android:hint="Username"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingStart="22dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="22dp"
+        android:paddingBottom="12dp"
+        android:text=""
+        android:textColor="#6637B4"
+        android:textSize="21sp"
+        android:translationZ="2dp"
+        app:layout_constraintEnd_toEndOf="@id/v_middle_serializable"
+        app:layout_constraintStart_toStartOf="@id/v_middle_serializable"
+        app:layout_constraintTop_toTopOf="@+id/v_middle_serializable" />
+
+    <EditText
+        android:id="@+id/et_serializable_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_edit_text_serializable"
+        android:fontFamily="@font/roboto_light"
+        android:gravity="center"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:paddingStart="22dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="22dp"
+        android:paddingBottom="12dp"
+        android:text=""
+        android:textColor="#6637B4"
+        android:textSize="21sp"
+        android:translationZ="2dp"
+        app:layout_constraintEnd_toEndOf="@id/v_middle_serializable"
+        app:layout_constraintStart_toStartOf="@id/v_middle_serializable"
+        app:layout_constraintTop_toBottomOf="@+id/et_serializable_username" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:textSize="21sp"
+        android:fontFamily="@font/roboto_light"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:background="@drawable/bg_serializable_button"
+        android:translationZ="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintStart_toStartOf="@id/v_middle_serializable"
+        app:layout_constraintEnd_toEndOf="@id/v_middle_serializable"
+        app:layout_constraintBottom_toBottomOf="@id/v_middle_serializable"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
