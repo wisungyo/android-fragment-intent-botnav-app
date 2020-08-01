@@ -1,11 +1,15 @@
 package com.binar.fragmentintentapp.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.binar.fragmentintentapp.Credential_Serializable
 import com.binar.fragmentintentapp.R
+import com.binar.fragmentintentapp.SerializableResponseActivity
+import kotlinx.android.synthetic.main.fragment_serializable.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -36,6 +40,22 @@ class SerializableFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_serializable, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        var username: String = ""
+        var password: String = ""
+
+        btn_serializable.setOnClickListener {
+            username = et_serializable_username.text.toString()
+            password = et_serializable_password.text.toString()
+
+            val serializableIntent = Intent(context, SerializableResponseActivity::class.java)
+            val credential = Credential_Serializable(username, password)
+            serializableIntent.putExtra("Credential_One", credential)
+            startActivity(serializableIntent)
+        }
     }
 
     companion object {

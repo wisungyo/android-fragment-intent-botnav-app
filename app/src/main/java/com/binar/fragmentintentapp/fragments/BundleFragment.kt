@@ -1,11 +1,14 @@
 package com.binar.fragmentintentapp.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.binar.fragmentintentapp.BundleResponseActivity
 import com.binar.fragmentintentapp.R
+import kotlinx.android.synthetic.main.fragment_bundle.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -36,6 +39,25 @@ class BundleFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_bundle, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        var username: String = ""
+        var password: String = ""
+
+        btn_bundle.setOnClickListener {
+            username = et_bundle_username.text.toString()
+            password = et_bundle_password.text.toString()
+
+            val bundleIntent = Intent(context, BundleResponseActivity::class.java)
+            val bundle = Bundle()
+
+            bundle.putString("username", username)
+            bundle.putString("password", password)
+            bundleIntent.putExtras(bundle)
+            startActivity(bundleIntent)
+        }
     }
 
     companion object {

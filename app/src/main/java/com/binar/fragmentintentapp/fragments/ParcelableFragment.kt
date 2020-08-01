@@ -1,11 +1,15 @@
 package com.binar.fragmentintentapp.fragments
 
+import android.content.Intent
+import android.net.wifi.hotspot2.pps.Credential
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.binar.fragmentintentapp.R
+import com.binar.fragmentintentapp.*
+import kotlinx.android.synthetic.main.fragment_bundle.*
+import kotlinx.android.synthetic.main.fragment_parcelable.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -36,6 +40,22 @@ class ParcelableFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_parcelable, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        var username: String = ""
+        var password: String = ""
+
+        btn_parcelable.setOnClickListener {
+            username = et_parcelable_username.text.toString()
+            password = et_parcelable_password.text.toString()
+
+            val parcelableIntent = Intent(context, ParcelableResponseActivity::class.java)
+            val credential = Credential_Parcelable(username, password)
+            parcelableIntent.putExtra("Credential_One", credential)
+            startActivity(parcelableIntent)
+        }
     }
 
     companion object {

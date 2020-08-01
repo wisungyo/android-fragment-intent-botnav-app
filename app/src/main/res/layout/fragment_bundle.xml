@@ -90,6 +90,7 @@
         app:layout_constraintTop_toBottomOf="@+id/et_bundle_username" />
 
     <Button
+        android:id="@+id/btn_bundle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Send"

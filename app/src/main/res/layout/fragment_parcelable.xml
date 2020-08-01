@@ -90,6 +90,7 @@
         app:layout_constraintTop_toBottomOf="@+id/et_parcelable_username" />
 
     <Button
+        android:id="@+id/btn_parcelable"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Send"
